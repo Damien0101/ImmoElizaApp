@@ -8,8 +8,52 @@ import pickle
 model = CatBoostRegressor()
 model = model.load_model('model/model.cbm', 'cbm')
 
-st.title('House Price Prediction 🏡')
-st.write('Please enter the following details to get the prediction')
+st.set_page_config(
+page_title="Hangman",
+page_icon="🏡",
+)
+ 
+languages = {"en": "English", "fr": "French"}
+
+language = st.sidebar.selectbox(
+    "🌍 Language",
+    list(languages.keys()),
+    format_func=lambda lang: languages[lang],
+)
+
+source_link = {
+    "en": "Show link to source code repository",
+    "fr": "montrer le lien du repository",
+}
+
+repo_url = "https://github.com/servietsky0/ImmoElizaApp"
+
+info_hosting = {
+    "en": f"Host your own app interface using <{repo_url}>",
+    "fr": f"Hébergez votre propre interface application en utilisant <{repo_url}>",
+}
+
+if st.sidebar.checkbox(source_link[language]):
+    st.info(info_hosting[language])
+
+title_lang = {"en": "House Price Prediction 🏡", "fr": "Prédiction du prix des maisons 🏡"}
+
+st.title(title_lang[language])
+
+instruction = {
+    "en": (
+        "1. fill in the various fields.\n"
+        "2. press the button to get the price of your house.\n"
+        "3. Enjoy my app!"
+    ),
+    "fr": (
+        "1. remplissez les différents champs pour obtenir le prix approximatif (lmao je suis trop drôle) de votre logement.\n"
+        "2. appuyez sur le bouton pour obtenir le prix de votre maison.\n"
+        "3. Amusez vous bien!"
+    ),
+}
+
+st.write(instruction[language])
 
 
 st.divider()
@@ -136,9 +180,11 @@ def prediction(features):
     prediction = model.predict(features) 
     return prediction 
 
-if st.button('Predict'):
-    st.success(round(prediction(user_input)))
 
+if st.button('Predict'):
+    st.success(f'{round(prediction(user_input)[0])}€')
+    with st.expander("GET YOUR GIFT"):
+            st.image("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.F3bkgjbhmNNDPbwbDxAwKAAAAA%26pid%3DApi&f=1&ipt=1a57a25d2e9428e95a23d61f9a9424fc9231b4ca1961d2444bad565c3e3c2678&ipo=images")
 
 
 
