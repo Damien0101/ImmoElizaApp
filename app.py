@@ -55,7 +55,6 @@ instruction = {
 
 st.write(instruction[language])
 
-
 st.divider()
 st.title('Type of Property ☯️')
 

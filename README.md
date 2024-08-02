@@ -1,4 +1,4 @@
-#  House Price Predition 🤑
+#  House Price Predition 🤑🤑
 
 ## 📜 Project Description
 *This project aims to predict house prices using a machine learning model implemented through a Streamlit web application. The application allows users to input various property details and receive an estimated price for their house. The prediction model is built using CatBoostRegressor, a robust machine learning algorithm known for its efficiency in handling categorical features.*
@@ -13,18 +13,21 @@ This project is designed to predict house prices by allowing users to input vari
 
 ## 🤖 Sample Code 
 ```python
+# Dictionary mapping language codes to language names
 languages = {"en": "English", "fr": "French"}
 
+# Sidebar for language selection
 language = st.sidebar.selectbox(
-    "🌍 Language",
+    "🌍 Language"
     list(languages.keys()),
     format_func=lambda lang: languages[lang],
 )
 
+# Dictionary mapping language codes to phrases for showing the source link
 source_link = {
     "en": "Show link to source code repository",
     "fr": "montrer le lien du repository",
-
+}
 ```
 
 ## ⏱️ Project Timeline 
@@ -86,31 +89,38 @@ To run the app locally, follow these steps:
 1. Clone the repository:
 
     
-    ``` git clone https://github.com/servietsky0/ImmoElizaApp ```
+    ```sh
+    git clone https://github.com/servietsky0/ImmoElizaApp
+    ```
     
 
 2. Navigate into the cloned repository:
 
     
-    ``` cd ./ImmoElizaApp ```
+    ```sh
+    cd ../ImmoElizaApp 
+    ```
 
 
 3. Install the necessary dependencies using pip:
 
     
-    ``` pip install -r requirements.txt ```
+    ```sh
+    pip install -r requirements.txt
+    ```
     
 
 4. Once you did all the these steps, type this commande in the terminal:
 
-   ``` python3 main.py ```   
-          or               
-   ``` python main.py ```
-    
+   ```sh
+   streamlit run app.py
+   ```
+      
+    OR 
 
-Or you can just open your web browser and navigate to [https://price-prediction-elje.onrender.com/](https://price-prediction-elje.onrender.com) to use the app.
-
-
+   ```sh              
+   streamlit run app.py 
+   ```
 ---
 ## 🎉 Have Fun!
 
