@@ -42,12 +42,12 @@ st.title(title_lang[language])
 
 instruction = {
     "en": (
-        "1. fill in the various fields.\n"
+        "1. fill in the various fields based on the options.\n"
         "2. press the button to get the price of your house.\n"
         "3. Enjoy my app!"
     ),
     "fr": (
-        "1. remplissez les différents champs pour obtenir le prix approximatif (lmao je suis trop drôle) de votre logement.\n"
+        "1. remplissez les différents champs sur base des options.\n"
         "2. appuyez sur le bouton pour obtenir le prix de votre maison.\n"
         "3. Amusez vous bien!"
     ),
@@ -168,13 +168,11 @@ features = [BathroomCount, BedroomCount, District, FloodingZone, Garden,
        StateOfBuilding, SubtypeOfProperty, SurfaceOfPlot, SwimmingPool,
        Terrace, ToiletCount, TypeOfProperty, TypeOfSale]
 
-features = pd.DataFrame([features], columns=col)
 
- 
+features = pd.DataFrame([features], columns=col)
 
 ohetransform = encoder.transform(pd.DataFrame([col_to_encode], columns=col_to_encode))
 user_input = pd.concat([features, ohetransform], axis=1).drop(columns=col_to_encode)
-
 
 def prediction(features):   
     prediction = model.predict(features) 
