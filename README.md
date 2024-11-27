@@ -3,7 +3,7 @@
 ## 📜 Project Description
 *This project aims to predict house prices using a machine learning model implemented through a Streamlit web application. The application allows users to input various property details and receive an estimated price for their house. The prediction model is built using CatBoostRegressor, a robust machine learning algorithm known for its efficiency in handling categorical features.*
 
-[![N|Solid](house.jpeg "easter egg")](https://ih1.redbubble.net/image.1303800767.8302/raf,360x360,075,t,fafafa:ca443f4786.jpg)
+[![N|Solid](scraper/house.jpeg "easter egg")](https://ih1.redbubble.net/image.1303800767.8302/raf,360x360,075,t,fafafa:ca443f4786.jpg)
 
 ***click on the image to make your first prediction...***
 
