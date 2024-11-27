@@ -8,12 +8,12 @@ def main():
 
     # Scraper for houses for sale
     base_url_sale = 'https://www.immoweb.be/en/search/house/for-sale?countries=BE'
-    output_file_sale = "./Data/data.csv"
+    output_file_sale = "./../data/data.csv"
     scraper_sale = ImmowebScraper(base_url_sale, headers, output_file_sale, type_of_sale="sale")
     scraper_sale.run_scraper()
 
     base_url_rent = 'https://www.immoweb.be/en/search/house/for-rent?countries=BE'
-    output_file_rent = "./Data/data.csv"
+    output_file_rent = "./../data/data.csv"
     scraper_rent = ImmowebScraper(base_url_rent, headers, output_file_rent, type_of_sale="rent")
     scraper_rent.run_scraper()
 

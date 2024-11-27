@@ -16,8 +16,6 @@ This project is designed to scrape property information from the Immoweb website
 ```plaintext
 SCRAPER_IMMOWEB/
 │
-├── Note/
-│   └── <note files>
 ├── Utils/
 │   ├── __pycache__/
 │   ├── scrap_draft.py
@@ -25,8 +23,8 @@ SCRAPER_IMMOWEB/
 │   ├── scrap_multy.py
 │   └── scrap.py
 ├── main.py
-├── README.md
-└── requirements.txt
+└── README.md
+
 ```
 
 ## 🧑🏻‍💻 Functions used
